@@ -1,1 +1,1 @@
-Hello Git and GitHub
+Hello Git and GitHub, this is my first project for you.  I have created a customised horoscope depending on user input.  Just input star sign and hour born and your horoscope will pop up as an alert.  Can you find the secret message? Have fun!
