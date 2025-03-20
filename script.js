@@ -1,6 +1,5 @@
-let day = 29
-let month = 'September'
-let hourBorn = 4
+let day = 11
+let month = 'February'
 let star = (day, month) => {
   if (day >= 21 && month === 'March' || day < 21 && month === 'April') {
     return 'Aries';
@@ -60,65 +59,78 @@ starMessage = (star) => {
   }
 }
 
-moonSign = (hourBorn) => {
-switch (hourBorn) {
-  case 0 || 1:
+let moonRandom = Math.floor(Math.random() * 12)
+
+let moon = (moonRandom) => {
+switch (moonRandom) {
+  case 1:
     return 'Aries';
-    case 2 || 3:
+    case 2:
     return 'Taurus';
-    case 4 || 5:
+    case 3:
     return 'Gemini';
-    case 6 || 7:
+    case 4:
     return 'Cancer';
-    case 8 || 9:
+    case 5:
     return 'Leo';
-    case 10 || 11:
+    case 6:
     return 'Virgo';
-    case 12 || 13:
+    case 7:
     return 'Libra';
-    case 14 || 15:
+    case 8:
     return 'Scorpio';
-    case 16 || 17:
+    case 9:
     return 'Sagittarius';
-    case 18 || 19:
+    case 10:
     return 'Capricorn';
-    case 20 || 21:
+    case 11:
     return 'Aquarius';
-    case 22 || 23:
+    case 12:
     return 'Pisces';
     default:
-    return 'Please enter a number between 0 - 23'
+    return 'Please enter a number between 1 - 12'
 }
 }
+moonSign = moon(moonRandom)
 
 moonMessage = (moonSign) => {
 switch (moonSign) {
   case 'Aries':
-    return 'Aries';
-    case 2 || 3:
-    return 'Taurus';
-    case 4 || 5:
-    return 'Gemini';
-    case 6 || 7:
-    return 'Cancer';
-    case 8 || 9:
-    return 'Leo';
-    case 10 || 11:
-    return 'Virgo';
-    case 12 || 13:
-    return 'Libra';
-    case 14 || 15:
-    return 'Scorpio';
-    case 16 || 17:
-    return 'Sagittarius';
-    case 18 || 19:
-    return 'Capricorn';
-    case 20 || 21:
-    return 'Aquarius';
-    case 22 || 23:
-    return 'Pisces';
+    return 'You will find love on your next travels!';
+    case 'Taurus':
+    return 'Watch out for red flags in moments that seem off!';
+    case 'Gemini':
+    return 'Doing an activity with a friend will help you relax!';
+    case 'Cancer':
+    return 'You will eventually lose something close, hold tight!';
+    case 'Leo':
+    return 'Stand with pride as you feel closure!';
+    case 'Virgo':
+    return 'Unpleasant conversation may arise, take deep breaths! ';
+    case 'Libra':
+    return 'You will represent justice, make sure to do so smartly!';
+    case 'Scorpio':
+    return 'You may encounter someone from your past!';
+    case 'Sagittarius':
+    return 'Be ready to make an important decision!';
+    case 'Capricorn':
+    return 'Your friends will see you as a constant source of positivity!';
+    case 'Aquarius':
+    return 'An upcoming birthday could present you an unexpected gift!';
+    case 'Pisces':
+    return 'Disappointment is inevitable, do your best! ';
 }
   }
+
+  secretMessage = () => {
+  if (starSign === moonSign) {
+    console.log('You will win 100 million dollars someday!!!')
+  } else {
+    console.log('Good Luck!')
+  }
+}
 console.log(starSign)
 console.log(starMessage(starSign))
-console.log(moonSign(hourBorn))
+console.log(moonSign)
+console.log(moonMessage(moonSign))
+secretMessage()
